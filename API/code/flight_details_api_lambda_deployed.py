@@ -1,5 +1,3 @@
-""" Code deployed on AWS lambda and used by API gateway"""
-
 import os
 import sys
 import subprocess
@@ -8,15 +6,9 @@ import datetime
 import boto3
 from typing import Counter
 import time as time_formatter
-
-# pip temporarily installs xmltodict module to /tmp/, xmltodict module will then get deleted after runtime
-subprocess.call('pip install xmltodict -t /tmp/ --no-cache-dir'.split(), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-sys.path.insert(1, '/tmp/')
 from xmltodict import parse as xmltodict
 
 """ Functional/exposed functions """
-
-
 
 def lambda_handler(event, context):
     """ Handle API GET request and response """
