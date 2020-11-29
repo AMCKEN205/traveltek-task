@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin Sans");
+
+  body {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  div {
+    text-align: center;
+    size: 40px
+  }
+
+  #top-level-container{
+    width : 85vw !important;
+  }
+  
+  /* Nav styling */
+
+  /* navbar styling */
+  .navbar{
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  .navbar-nav {
+    background-color: #5cb6c4;
+    width: 100%;
+  }
+  
+  .nav-item a {
+    color: white;
+    font-family: 'Josefin Sans', serif;
+  }
+
+  .nav-item a:visited {color: white;}   /* visited link */
+  .nav-item a:hover {color: white;}     /* mouse over link */
+  .nav-item a:active {color: white;}    /* selected link */
+
+  
+  .nav-item:hover:not(.active) {
+    background-color: #77c7d3;
+  }
+  
+  .active {
+    background-color: #5b5bc1;
+  }
+
+   /* hamburger menu styling */
+
+  .icon-hamburger {
+    font-size: 36px !important;
+  }
+
+  .icon-close-hamburger {
+    font-size: 36px !important;
+    left: 50%;
+    top: 30%;
+    position: fixed;
+  }
+
+  #nav-show-btn {
+    margin-top : 0.2vh;
+    background: none !important;
+    border: none !important;
+  }
+
+  /* End of nav styling */
