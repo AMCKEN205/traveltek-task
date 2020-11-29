@@ -1,9 +1,12 @@
+// Setup request attributes
 var request = new XMLHttpRequest();
 var request_type = "GET";
 var request_endpoint = "https://t423qudqv9.execute-api.eu-west-1.amazonaws.com/deployed?requestedData=flight-class-appearances"
 
+// Setup request
 request.open(request_type, request_endpoint);
 
+// Setup request event handle for once made
 request.onload = function() {
     // Extract flight class appearance data from the API response and format as required by Canvas.js
     var flight_class_appearances_obj = JSON.parse(request.responseText);
@@ -34,4 +37,5 @@ request.onload = function() {
     chart.render();
 }
 
+// Send the request
 request.send();

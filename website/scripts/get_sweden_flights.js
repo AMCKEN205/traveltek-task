@@ -1,9 +1,12 @@
+// Setup request attributes
 var request = new XMLHttpRequest();
 var request_type = "GET";
 var request_endpoint = "https://t423qudqv9.execute-api.eu-west-1.amazonaws.com/deployed?requestedData=sweden-flights-data"
 
+// Setup request
 request.open(request_type, request_endpoint);
 
+// Setup request event handle for once made
 request.onload = function() {
     var sweden_flights_count = JSON.parse(request.responseText)["Sweden flights count"];
     var percent_flights_sweden = JSON.parse(request.responseText)["Percentage flights into Sweden"];
@@ -13,4 +16,5 @@ request.onload = function() {
         That's ${percent_flights_sweden}% of all flights in the dataset.`;
 }
 
+// Send the request
 request.send();

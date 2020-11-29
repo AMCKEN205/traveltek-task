@@ -1,9 +1,12 @@
+// Setup request attributes
 var request = new XMLHttpRequest();
 var request_type = "GET";
 var request_endpoint = "https://t423qudqv9.execute-api.eu-west-1.amazonaws.com/deployed?requestedData=top10-destinations"
 
+// Setup request
 request.open(request_type, request_endpoint);
 
+// Setup request event handle for once made
 request.onload = function() {
     // Extract top 10 destination data from the API response and format as required by Canvas.js
     var top10_dests_obj = JSON.parse(request.responseText);
@@ -20,7 +23,7 @@ request.onload = function() {
             theme: "light2",
             title : {text : "Top 10 Flight Destinations"},
             axisX : {
-                title: "Desination Airport IATA Code"
+                title: "Desination Airport IATA Codes"
             },
             axisY: {
                 title: "Count Of Arrivals"
@@ -36,4 +39,5 @@ request.onload = function() {
     chart.render();
 }
 
+// Send the request
 request.send();
