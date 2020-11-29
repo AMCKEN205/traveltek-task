@@ -10,13 +10,19 @@ document.writeln(
                     <a class="nav-link text-decoration-none" href="all_flights.html">All Flights</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-decoration-none" href="">Link</a>
+                    <a class="nav-link text-decoration-none" href="morning_flights.html">Morning flights</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-decoration-none" href="#">Link</a>
+                    <a class="nav-link text-decoration-none" href="sweden_flights.html">Sweden flights</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-decoration-none" href="#">Link</a>
+                    <a class="nav-link text-decoration-none" href="top10_destinations.html">Top10 Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-decoration-none" href="average_journey_times.html">Average Journey Times</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-decoration-none" href="flight_class_appearances.html">Flight Class Appearances</a>
                 </li>
             </ul>
         </nav>
@@ -42,7 +48,7 @@ window.onload = function(){
     }
 
     document.getElementById("nav-show-btn").onclick = function() {showNav()};
-    document.getElementById("content").onclick = function() {hideNav()};
+    document.body.addEventListener('click', hideNav, true)
     window.onresize = function() {hideNav()};
 });
 }

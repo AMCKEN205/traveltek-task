@@ -1,18 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin Sans");
 
+  /* Setup padding for styling and make html doc fill entire viewable screen 
+  for nav bar hide onclick event */
+
   body {
     padding-top: 4rem;
     padding-bottom: 2rem;
+    margin: 0;
+    height: 100%;
   }
 
+  html {
+    margin: 0;
+    height: 100%;
+  }
+
+  /* General element styling */
   div {
-    text-align: center;
-    size: 40px
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   #top-level-container{
     width : 85vw !important;
+    text-align: center;
+    font-size: xx-large;
   }
+  
+  select {
+    display: block;
+    margin: 0 auto;
+    }
+
   
   /* Nav styling */
 
@@ -23,7 +42,7 @@
   }
 
   .navbar-nav {
-    background-color: #5cb6c4;
+    background-color: #434345;
     width: 100%;
   }
   
@@ -38,11 +57,11 @@
 
   
   .nav-item:hover:not(.active) {
-    background-color: #77c7d3;
+    background-color: #565658;
   }
   
   .active {
-    background-color: #5b5bc1;
+    background-color:#EF7332;
   }
 
    /* hamburger menu styling */

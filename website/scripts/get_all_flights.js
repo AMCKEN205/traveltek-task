@@ -6,9 +6,8 @@ request.open(request_type, request_endpoint);
 
 request.onload = function() {
     var all_flights_count = JSON.parse(request.responseText)["All flights count"];
-    console.log(all_flights_count);
 
-    document.getElementById("total-flights-count").innerHTML = all_flights_count;
+    document.getElementById("top-level-container").innerHTML = `There are ${all_flights_count} total flights in the dataset`;
 }
 
 request.send();
