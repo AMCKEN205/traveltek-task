@@ -43,16 +43,25 @@ def lambda_handler(event, context):
         else:
             return {
                 "statusCode": 400,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*"
+                },
                 "body": json.dumps("Invalid data requested")
             }
     except:
         return {
         "statusCode": 501,
+        "headers": {
+            "Access-Control-Allow-Origin": "*"
+        },
         "body": json.dumps("Internal server error")
         }
     
     return {
         "statusCode": 200,
+        "headers": {
+            "Access-Control-Allow-Origin": "*"
+        },
         "body": data_to_return
         }
     
