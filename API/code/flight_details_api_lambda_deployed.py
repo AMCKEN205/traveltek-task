@@ -249,7 +249,6 @@ def get_flight_class_appearances():
 
         classes_to_add = [out_flight_class, in_flight_class]
 
-        # Handle formatting inconsistencies, inefficient to apply all these filters however looks tidier than an if/else chain, and the overhead is negligible.
         class_pos = 0
         
         while class_pos < len(classes_to_add):
