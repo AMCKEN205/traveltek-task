@@ -8,6 +8,8 @@ from typing import Counter
 import time as time_formatter
 from xmltodict import parse as xmltodict
 
+""" This code is hosted on AWS and is run on API request. """
+
 """ Functional/exposed functions """
 
 def lambda_handler(event, context):

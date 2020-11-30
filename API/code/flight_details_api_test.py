@@ -5,7 +5,8 @@ from typing import Counter
 from xmltodict import parse as xmltodict
 import time as time_formatter
 
-""" This code is hosted on AWS and is run on API request. """
+
+""" This code is run locally to test API functions prior to deployment. """
 
 """ Functional/exposed methods """
 
@@ -191,7 +192,6 @@ def get_flight_class_appearances():
 
         classes_to_add = [out_flight_class, in_flight_class]
 
-        # Handle formatting inconsistencies, inefficient to apply all these filters however looks tidier than an if/else chain, and the overhead is negligible.
         class_pos = 0
         
         while class_pos < len(classes_to_add):
