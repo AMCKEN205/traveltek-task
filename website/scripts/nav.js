@@ -7,7 +7,7 @@ document.writeln(
         <nav id="main-navbar" class="navbar nav-fill navbar-expand-sm fixed-top d-none d-sm-block">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link text-decoration-none" href="all_flights.html">All Flights</a>
+                    <a id="index-nav" class="nav-link text-decoration-none" href="index.html">All Flights</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-decoration-none" href="morning_flights.html">Morning flights</a>
@@ -38,19 +38,28 @@ document.writeln(
 window.onload = function(){
 
     // Set navbar active page highlighting.
-
-    // target each nav class attribute individually
-    $('.navbar a').each(function() {
-        if ($(this).attr('href') == fileName) 
-        { 
-            $(this).addClass('active'); 
-            $(this).addClass('disabled'); 
+    
+    // Set the navbar active to the index page if we're at origin
+    if (document.URL == document.location.origin.concat("/")){
+        document.getElementById("index-nav").classList.add("active");
+        document.getElementById("index-nav").classList.add("disabled");
     }
-
+    else {
+        // otherwise target each nav class attribute individually
+        $(".navbar a").each(function() {
+            // and find the current active page
+            if ($(this).attr('href') == fileName) 
+            { 
+                $(this).addClass("active"); 
+                $(this).addClass("disabled");
+            }
+        });
+    }
+    
     document.getElementById("nav-show-btn").onclick = function() {showNav()};
-    document.body.addEventListener('click', hideNav, true)
+    document.body.addEventListener("click", hideNav, true)
     window.onresize = function() {hideNav()};
-});
+
 }
 
 // Show navbar on mobile hamburger button click/tap.
